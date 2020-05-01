@@ -189,11 +189,11 @@ command :build do |c|
       css_file = sass_file.gsub(/\.scss$/,'.css')
       command = "sass #{sass_file} #{css_file}"
       unless system(command)
-        STDERR.puts "Problem running '#{command}'"
+        STDERR.puts "There was a problem running '#{command}'"
       end
     end
 
-    puts "Note that typekit won't work unless you serve your presentation via a web server" if typekit_id
+    puts "Note that typekit won't work unless you serve your presentation via a web server." if typekit_id
   end
 end
 
